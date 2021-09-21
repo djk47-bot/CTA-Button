@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    
+        .j_btn {
+            display: block;
+            height: 70px;
+            width: 300px;
+            background-color: darkorange;
+            color: darkorchid;
+            text-align: center;
+            font-size: 200%;
+            line-height: 75px;
+            font-family: creepster;
+            border-radius: 5px;
+            text-decoration: none;
+            <!- This section is to design the button. ->
+        }
+
+        .j_btn span {
+            cursor: pointer;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .j_btn span:after {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -5px;
+            transition: 0.5s;
+            color: red;
+
+        }
+
+        .j_btn:hover span {
+            padding-right: 3.5px;
+            color: red;
+
+        }
+
+        .j_btn:hover span:after {
+            opacity: 1;
+            right: 0;
+            color: red;
+            <!- These few sections are setting up the hover function when a mouse comes over the button ->
+
+        }
+    </style>
+    <script src='http://use.edgefonts.net/creepster.js'></script>
+    <script src='http://use.edgefonts.net/nosifer.js'></script>
+    <!- The links above are special font families used for the button and the heading. ->
+    <title>Spooky Button</title>
+</head>
+
+<body style="background-color: black;">
+    <center>
+        <h1 style="font-size:10vw">
+            <p style="color:darkorange; font-size: 55px; font-family: nosifer">Happy Halloween</p>
+        </h1>
+    </center>
+    <!- The section above is the header on the page. ->
+    <div style="display: flex; justify-content: center;">
+        <a href="https://www.youtube.com/watch?v=DTmFIB8Gu10" class="j_btn"><span> Click if You Dare!</span></a>
+    </div>
+    <!- This section is the link the page will go to once the CTA button is clicked. ->
+
+</body>
+
+</html>
