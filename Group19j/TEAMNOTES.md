@@ -9,7 +9,10 @@ Began to coordinate out of class schedules to meet
               Super()
               this.imgSrc = ' title of images';
               }
-     -
+              
+   - Button creation walkthrough:
+        - "--" is important to include. CSS code signifies that the code is a variable --> can name the  variable whatever you like. Example: --psu-btn-text-color: orange;  
+       
   - Our next steps:
     -  Continue coding; adding button features, etc.
     - refining the complexity of out project; what features are important and which ones are rather complex/unnecessary.
