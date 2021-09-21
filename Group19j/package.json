@@ -2,7 +2,7 @@
   "name": "CTA-Button",
   "description": "Webcomponent cta-btn following open-wc recommendations",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
