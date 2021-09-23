@@ -38,6 +38,7 @@ export class CtaBtn extends LitElement {
     super();
     this.title = 'Hey there';
     this.counter = 5;
+    this.link = 'https://github.com/ist402groupj/CTA-Button';
   }
 
   __increment() {
@@ -53,7 +54,13 @@ export class CtaBtn extends LitElement {
   render() {
     return html`
       <h2>${this.title} Counter: ${this.counter}!</h2>
-      <a role="button" href="${this.link}" @click=${this.__increment}>increment</button>
+      <a
+        role="button"
+        href="${this.link}"
+        target="_blank"
+        @click=${this.__increment}
+        >increment</a
+      >
     `;
   }
 }
