@@ -1,4 +1,6 @@
 import { html, css, LitElement } from 'lit';
+import '@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js';
+import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
 export class CtaBtn extends LitElement {
   static get styles() {
@@ -9,6 +11,17 @@ export class CtaBtn extends LitElement {
         color: var(--cta-btn-text-color, #000);
       }
       a {
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+      }
+      a:hover,
+      a:focus {
+        color: white;
+        background-color: darkgray;
+        transition: 0.2s;
+      }
+      button {
         border-radius: 10px;
         border-width: 1px;
         text-decoration: none;
@@ -18,8 +31,8 @@ export class CtaBtn extends LitElement {
         color: black;
         transition: 0.2s;
       }
-      a:hover,
-      a:focus {
+      button:hover,
+      button:focus {
         color: white;
         background-color: darkgray;
         transition: 0.2s;
@@ -31,12 +44,13 @@ export class CtaBtn extends LitElement {
     return {
       title: { type: String },
       counter: { type: Number },
+      link: { type: String },
     };
   }
 
   constructor() {
     super();
-    this.title = 'Hey there';
+    this.title = 'Hey there'; // overwritten by demo index.html
     this.counter = 5;
     this.link = 'https://github.com/ist402groupj/CTA-Button';
   }
@@ -47,20 +61,24 @@ export class CtaBtn extends LitElement {
 
   /* TODO
     Styling
-    Accessibility tabbing
-    href link
     update @click functionality
   */
   render() {
     return html`
       <h2>${this.title} Counter: ${this.counter}!</h2>
       <a
-        role="button"
         href="${this.link}"
+        tabindex="-1"
+        role="button"
+        rel="noopener"
         target="_blank"
         @click=${this.__increment}
-        >increment</a
       >
+        <button>
+          <simple-icon-lite icon="social:public"></simple-icon-lite>
+          Open GitHub
+        </button>
+      </a>
     `;
   }
 }
