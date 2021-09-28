@@ -17,3 +17,8 @@ Began to coordinate out of class schedules to meet
     -  Continue coding; adding button features, etc.
     - refining the complexity of out project; what features are important and which ones are rather complex/unnecessary.
     - planning time outside of class to finish and submit assignment
+
+9/28 Class Updates
+    - Similarities in our implementations:
+    - Differences in implementations:
+    - Code Snippet: 
