@@ -18,7 +18,22 @@ Began to coordinate out of class schedules to meet
     - refining the complexity of out project; what features are important and which ones are rather complex/unnecessary.
     - planning time outside of class to finish and submit assignment
 
-9/28 Class Updates
-    - Similarities in our implementations:
-    - Differences in implementations:
-    - Code Snippet: 
+9/28 Class Updates: Comparing code with Nick Alico's group
+  - Similarities in our implementations:
+    1) both consistently handling hover and focus states
+    2)  Buttons have similar structures: icon within a button tag, both open a link in a new tab
+    
+  - Differences in implementations:
+     1) when hovering over their button, they have an icon that turns 90 degrees
+     2) Other group has three buttons, we only have one.
+     
+  - Code Snippet: 
+   For our button, we could implement an icon of a little bat or a ghost that turns when the mouse      hovers over it. Not sure if this is a definite change we will make, but something to consider.
+```   
+       button:hover #caret-icon {
+        transform: rotate(-90deg);
+        transition: all 0.2s ease;
+        }
+```
+       
+        
