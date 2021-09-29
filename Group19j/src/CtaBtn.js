@@ -53,6 +53,7 @@ export class CtaBtn extends LitElement {
       title: { type: String },
       counter: { type: Number },
       link: { type: String },
+      icon: { type: String },
     };
   }
 
