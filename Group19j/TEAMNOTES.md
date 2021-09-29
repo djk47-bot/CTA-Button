@@ -35,5 +35,16 @@ Began to coordinate out of class schedules to meet
         transition: all 0.2s ease;
         }
 ```
+
+ Wednesday 9/29/2021 Group Meeting:
+ 
+ Resources used:
+ Spooky font: https://intavant.com/blog/2012/10-best-scary-web-fonts-for-halloween/
+ Changing text hover state: https://stackoverflow.com/questions/54241934/changing-button-text-on-hover
+ Scary video: https://www.youtube.com/watch?v=Hq_C-s3JzS4
+ 
+ (both groups worked off of on computer from each group) --> there were issues pushing work onto github so our group found other ways to collaborate;
+
+ 
        
         
