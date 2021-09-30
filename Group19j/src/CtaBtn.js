@@ -54,6 +54,7 @@ export class CtaBtn extends LitElement {
       counter: { type: Number },
       link: { type: String },
       icon: { type: String },
+      disabled: { type: Boolean },
     };
   }
 
@@ -63,6 +64,7 @@ export class CtaBtn extends LitElement {
     this.text = 'Click if you dare';
     this.link = 'https://www.youtube.com/watch?v=Hq_C-s3JzS4';
     this.icon = 'report-problem';
+    this.disabled = false;
   }
 
   /* TODO
@@ -73,15 +75,17 @@ export class CtaBtn extends LitElement {
     return html`
       <h2>${this.title}</h2>
       <a
+        @click="${this.__click}"
         href="${this.link}"
         tabindex="-1"
         role="button"
         rel="noopener"
         target="_blank"
       >
-        <button>
+        <button ?disabled="${this.disabled}">
           <simple-icon-lite icon=${this.icon}></simple-icon-lite>
           ${this.text}
+          <slot></slot>
         </button>
       </a>
     `;
