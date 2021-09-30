@@ -19,8 +19,8 @@ export class CtaBtn extends LitElement {
       }
       a:hover,
       a:focus {
-        color: white;
-        background-color: darkgray;
+        color: orange;
+        background-color: #4c3457;
         transition: 0.2s;
       }
       button {
@@ -41,9 +41,9 @@ export class CtaBtn extends LitElement {
       }
       button:hover,
       button:focus {
-        color: white;
-        background-color: darkgray;
-        transition: 0.2s;
+        color: orange;
+        background-color: #4c3457;
+        transition: 0.1s;
       }
     `;
   }
@@ -60,7 +60,7 @@ export class CtaBtn extends LitElement {
 
   constructor() {
     super();
-    this.title = 'GitHub CTA Button'; // overwritten by index.html
+    this.title = 'GitHub CTA Button'; // overwritten by template
     this.text = 'Click if you dare';
     this.link = 'https://www.youtube.com/watch?v=Hq_C-s3JzS4';
     this.icon = 'report-problem';
