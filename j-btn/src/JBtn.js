@@ -27,13 +27,12 @@ export class JBtn extends LitElement {
         text-decoration: none;
         text-shadow: 0px 1px 0px #ffee66;
       }
-      .j-btn:hover {
+      .j-btn:hover,
+      .j-btn:focus {
         background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
         background-color: #ffab23;
       }
-      .j-btn:focus {
-        background-color: #0000;
-      }
+
       .j-btn:active {
         position: relative;
         top: 1px;
