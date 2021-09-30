@@ -19,8 +19,8 @@ export class CtaBtn extends LitElement {
       }
       a:hover,
       a:focus {
-        color: white;
-        background-color: darkgray;
+        color: orange;
+        background-color: #4c3457;
         transition: 0.2s;
       }
       button {
@@ -41,9 +41,9 @@ export class CtaBtn extends LitElement {
       }
       button:hover,
       button:focus {
-        color: white;
-        background-color: darkgray;
-        transition: 0.2s;
+        color: orange;
+        background-color: #4c3457;
+        transition: 0.1s;
       }
     `;
   }
@@ -54,15 +54,17 @@ export class CtaBtn extends LitElement {
       counter: { type: Number },
       link: { type: String },
       icon: { type: String },
+      disabled: { type: Boolean },
     };
   }
 
   constructor() {
     super();
-    this.title = 'GitHub CTA Button'; // overwritten by index.html
+    this.title = 'GitHub CTA Button'; // overwritten by template
     this.text = 'Click if you dare';
     this.link = 'https://www.youtube.com/watch?v=Hq_C-s3JzS4';
     this.icon = 'report-problem';
+    this.disabled = false;
   }
 
   /* TODO
@@ -73,15 +75,17 @@ export class CtaBtn extends LitElement {
     return html`
       <h2>${this.title}</h2>
       <a
+        @click="${this.__click}"
         href="${this.link}"
         tabindex="-1"
         role="button"
         rel="noopener"
         target="_blank"
       >
-        <button>
+        <button ?disabled="${this.disabled}">
           <simple-icon-lite icon=${this.icon}></simple-icon-lite>
           ${this.text}
+          <slot></slot>
         </button>
       </a>
     `;

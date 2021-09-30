@@ -6,6 +6,7 @@
   <style>
     body {
       background: black;
+      text-align: center;
     }
     h2 .title-text {
       color: orange;
@@ -19,11 +20,11 @@
     import { html, render } from 'lit';
     import '../cta-btn.js';
 
-    const title = 'Happy Halloween!';
+    const title = 'Happy Halloween';
     render(
       html`
         <cta-btn .title=${title}>
-          some light-dom
+          
         </cta-btn>
       `,
       document.querySelector('#demo')
