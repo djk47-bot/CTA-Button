@@ -4,26 +4,18 @@
   <meta charset="utf-8">
   <style>
     body {
-      background: #fafafa;
+      background: black;
+      
     }
   </style>
 </head>
 <body>
   <div id="demo"></div>
-
+  <j-btn title="stuff"></j-btn>
+  <j-btn title="stuff" disabled></j-btn>
+  <j-btn title="Halloween"></j-btn>
   <script type="module">
-    import { html, render } from 'lit';
     import '../j-btn.js';
-
-    const title = 'Hello owc World!';
-    render(
-      html`
-        <j-btn .title=${title}>
-          some light-dom
-        </j-btn>
-      `,
-      document.querySelector('#demo')
-    );
   </script>
 </body>
 </html>
