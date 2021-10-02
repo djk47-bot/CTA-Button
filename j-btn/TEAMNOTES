@@ -13,3 +13,8 @@ Static get properties ()
 disabled: { type: Boolean, reflect: true },
 constructor() {
 this.disabled = false;
+
+09/29/21 
+Team Meeting
+The four of met together as a team yesterday evening to work on the button project.
+We were able to come up with an updated version of the button.
