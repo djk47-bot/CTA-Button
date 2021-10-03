@@ -11,7 +11,7 @@ export class JBtn extends LitElement {
         color: var(--j-btn-text-color, darkorange);
       }
       :host([disabled]) h2 {
-        background-color: blue;
+        background-color: black;
       }
       a {
         display: inline-block;
