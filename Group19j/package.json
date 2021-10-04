@@ -1,8 +1,9 @@
 {
   "name": "@ist402group19j/cta-button",
+=======
+  "version": "0.0.1",
   "description": "Webcomponent cta-btn following open-wc recommendations",
   "license": "MIT",
-  "version": "1.0.0",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -24,6 +25,7 @@
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "next",
+    "@storybook/addon-knobs": "^6.3.1",
     "@web/dev-server": "^0.1.22",
     "@web/dev-server-storybook": "next",
     "@web/test-runner": "^0.13.17",
@@ -58,5 +60,8 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
