@@ -1,5 +1,5 @@
 {
-  "name": "CTA-Button",
+  "name": "cta-button",
   "description": "Webcomponent cta-btn following open-wc recommendations",
   "license": "MIT",
   "version": "1.0.0",
@@ -16,6 +16,7 @@
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook"
   },
   "dependencies": {
+    "@lrnwebcomponents/intersection-element": "^4.0.0",
     "@lrnwebcomponents/simple-icon": "^4.0.0",
     "lit": "^2.0.0-rc.4"
   },
