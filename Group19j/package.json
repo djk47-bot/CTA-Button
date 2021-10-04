@@ -1,5 +1,5 @@
 {
-  "name": "cta-button",
+  "name": "@ist402group19j/cta-button",
   "description": "Webcomponent cta-btn following open-wc recommendations",
   "license": "MIT",
   "version": "1.0.0",
@@ -48,6 +48,10 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   },
   "lint-staged": {
     "*.js": [
