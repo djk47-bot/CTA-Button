@@ -23,21 +23,16 @@ function Template({ title = 'Happy Halloween!', textColor, slot }) {
   `;
 }
 
-export const Regular = Template.bind({});
-
-export const Primary = Template.bind({});
-Primary.args = {
-  title: 'Spooky Scary Skeletons',
-  component: 'cta-btn',
-  argTypes: {
-    variant: {
-      options: ['primary', 'secondary'],
-      control: { type: 'radio' },
-    },
-  },
+export const Big = Template.bind({});
+Big.args = {
+  size: 'small',
+  title: 'Spooky Scary smol Button',
+  backgroundColor: 'blue',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  title: 'Lets Get Spoooooky',
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  title: 'Lets Get SPOOKKYY',
+  backgroundColor: 'green',
 };
