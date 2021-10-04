@@ -1,5 +1,6 @@
 {
   "name": "@ist402group19j/cta-button",
+=======
   "version": "0.0.1",
   "description": "Webcomponent cta-btn following open-wc recommendations",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook"
   },
   "dependencies": {
+    "@lrnwebcomponents/intersection-element": "^4.0.0",
     "@lrnwebcomponents/simple-icon": "^4.0.0",
     "lit": "^2.0.0-rc.4"
   },
@@ -48,6 +50,10 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   },
   "lint-staged": {
     "*.js": [
