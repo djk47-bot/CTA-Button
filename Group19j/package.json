@@ -1,8 +1,9 @@
 {
+  "name": "@ist402group19j/cta-button",
+  "version": "0.0.1",
   "description": "Webcomponent cta-btn following open-wc recommendations",
   "license": "MIT",
-  "version": "1.0.0",
-  "main": "index.js",
+  "main":"index.js",
   "module": "index.js",
   "scripts": {
     "analyze": "cem analyze --litelement",
@@ -52,5 +53,9 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
