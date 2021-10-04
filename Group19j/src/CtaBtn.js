@@ -1,8 +1,9 @@
 import { html, css, LitElement } from 'lit';
 import '@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js';
 import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
+import { IntersectionObserverMixin } from '@lrnwebcomponents/intersection-element/lib/IntersectionObserverMixin.js';
 
-export class CtaBtn extends LitElement {
+export class CtaBtn extends IntersectionObserverMixin(LitElement) {
   static get styles() {
     return css`
       :host {
@@ -11,6 +12,16 @@ export class CtaBtn extends LitElement {
         color: var(--cta-btn-text-color, orange);
         font-family: Butcherman, fantasy;
         font-size: 30px;
+      }
+      :host([dark]) {
+        --cta-btn-background-color: black;
+        --cta-btn-text-color: white;
+      }
+      :host([dark]) :active {
+        --cta-btn-background-color: orange;
+      }
+      :host([dark]) :disabled {
+        --cta-btn-text-color: #ffffff;
       }
       a {
         text-decoration: none;
@@ -45,16 +56,27 @@ export class CtaBtn extends LitElement {
         background-color: #4c3457;
         transition: 0.1s;
       }
+      button:active {
+        color: white;
+        background-color: #4c3457;
+        transition: 0.1s;
+      }
+      button:disabled {
+        color: var(--cta-btn-text-color);
+        background-color: darkgray;
+        cursor: not-allowed;
+      }
     `;
   }
 
   static get properties() {
     return {
-      title: { type: String },
-      counter: { type: Number },
-      link: { type: String },
-      icon: { type: String },
-      disabled: { type: Boolean },
+      title: { type: String, reflect: true, attribute: 'title' },
+      text: { type: String, reflect: true, attribute: 'label' },
+      link: { type: String, reflect: true, attribute: 'href' },
+      icon: { type: String, reflect: true, attribute: 'icon' },
+      dark: { type: Boolean, reflect: true },
+      disabled: { type: Boolean, reflect: true },
     };
   }
 
@@ -62,32 +84,43 @@ export class CtaBtn extends LitElement {
     super();
     this.title = 'GitHub CTA Button'; // overwritten by template
     this.text = 'Click if you dare';
-    this.link = 'https://www.youtube.com/watch?v=Hq_C-s3JzS4';
+    this.link = 'https://www.youtube.com/watch?v=GMgsFZ4rkEI';
     this.icon = 'report-problem';
+    this.dark = false;
     this.disabled = false;
   }
 
-  /* TODO
-    Styling
-    update @click functionality
-  */
+  /*
+   * click event to disable button after click and avoid spam
+   */
+  _click(e) {
+    e.preventDefault();
+    window.open(this.link, '_blank');
+    const button = this.shadowRoot.querySelector('button');
+    button.setAttribute('disabled', '');
+    this.disabled = true;
+    setTimeout(() => {
+      this.disabled = false;
+    }, 2000); // delay 2 seconds
+    button.removeAttribute('disabled');
+  }
+
   render() {
-    return html`
-      <h2>${this.title}</h2>
-      <a
-        @click="${this.__click}"
-        href="${this.link}"
-        tabindex="-1"
-        role="button"
-        rel="noopener"
-        target="_blank"
-      >
-        <button ?disabled="${this.disabled}">
-          <simple-icon-lite icon=${this.icon}></simple-icon-lite>
-          ${this.text}
-          <slot></slot>
-        </button>
-      </a>
-    `;
+    return html` ${this.elementVisible
+      ? html` <h2>${this.title}</h2>
+          <a
+            href="${this.link}"
+            @click="${this._click}"
+            tabindex="-1"
+            role="button"
+            rel="noopener"
+            target="_blank"
+          >
+            <button ?disabled="${this.disabled}">
+              <simple-icon-lite icon=${this.icon}></simple-icon-lite>
+              ${this.text}
+            </button>
+          </a>`
+      : ``}`;
   }
 }
