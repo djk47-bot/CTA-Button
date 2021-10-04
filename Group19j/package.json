@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Webcomponent cta-btn following open-wc recommendations",
   "license": "MIT",
-  "main":"index.js",
+  "main": "index.js",
   "module": "index.js",
   "scripts": {
     "analyze": "cem analyze --litelement",
@@ -54,7 +54,6 @@
       "prettier --write"
     ]
   },
-  "private": false,
   "publishConfig": {
     "access": "public"
   }
