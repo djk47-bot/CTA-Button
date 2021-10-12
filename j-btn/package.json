@@ -1,9 +1,9 @@
 {
-  "name": "j-btn",
+  "name": "@ist402group19j/j-btn",
   "description": "Webcomponent j-btn following open-wc recommendations",
   "license": "MIT",
   "author": "j-btn",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -53,5 +53,9 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -2,17 +2,17 @@ import { html, css, LitElement } from 'lit';
 import '@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js';
 import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
-export class JBtn extends LitElement {
+export class CtaBtn extends LitElement {
   static get styles() {
     return css`
       :host {
         display: block;
-        padding: 25px;
-        color: var(--j-btn-text-color, #000);
+        padding: 20px;
+        color: var(--cta-btn-text-color, #000);
       }
       a {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
         color: black;
       }
       a:hover,
@@ -21,7 +21,7 @@ export class JBtn extends LitElement {
         background-color: darkgray;
         transition: 0.2s;
       }
-      button { 
+      button {
         border-radius: 10px;
         border-width: 1px;
         text-decoration: none;
@@ -43,22 +43,26 @@ export class JBtn extends LitElement {
   static get properties() {
     return {
       title: { type: String },
-      counter: { type: Number }
+      counter: { type: Number },
       link: { type: String },
     };
   }
 
   constructor() {
     super();
-    this.title = 'Hey there';
+    this.title = 'Hey there'; // overwritten by demo index.html
     this.counter = 5;
-    this.link = 'https://www.youtube.com/watch?v=DTmFIB8Gu10'
+    this.link = 'https://github.com/ist402groupj/CTA-Button';
   }
 
   __increment() {
     this.counter += 1;
   }
 
+  /* TODO
+    Styling
+    update @click functionality
+  */
   render() {
     return html`
       <h2>${this.title} Counter: ${this.counter}!</h2>
@@ -70,7 +74,7 @@ export class JBtn extends LitElement {
         target="_blank"
         @click=${this.__increment}
       >
-      <button>
+        <button>
           <simple-icon-lite icon="social:public"></simple-icon-lite>
           Open GitHub
         </button>
