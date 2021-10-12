@@ -6,39 +6,33 @@ export default {
   component: 'cta-btn',
   argTypes: {
     title: { control: 'text' },
-    counter: { control: 'number' },
     textColor: { control: 'color' },
+    backgroundColor: { control: 'color' },
+    onClick: { action: 'clicked' },
   },
 };
 
-function Template({ title = 'Hello world', counter = 5, textColor, slot }) {
+function Template({ title = 'Happy Halloween!', textColor, slot }) {
   return html`
     <cta-btn
-      style="--cta-btn-text-color: ${textColor || 'black'}"
+      style="--cta-btn-text-color: ${textColor || 'orange'}"
       .title=${title}
-      .counter=${counter}
     >
       ${slot}
     </cta-btn>
   `;
 }
 
-export const Regular = Template.bind({});
-
-export const CustomTitle = Template.bind({});
-CustomTitle.args = {
-  title: 'My title',
+export const Big = Template.bind({});
+Big.args = {
+  size: 'small',
+  title: 'Spooky Scary smol Button',
+  backgroundColor: 'blue',
 };
 
-export const CustomCounter = Template.bind({});
-CustomCounter.args = {
-  counter: 123456,
-};
-
-export const SlottedContent = Template.bind({});
-SlottedContent.args = {
-  slot: html`<p>Slotted content</p>`,
-};
-SlottedContent.argTypes = {
-  slot: { table: { disable: true } },
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  title: 'Lets Get SPOOKKYY',
+  backgroundColor: 'green',
 };

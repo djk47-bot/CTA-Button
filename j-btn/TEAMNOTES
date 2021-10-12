@@ -1,0 +1,20 @@
+Penguin Button - PenStat
+
+2 things that are similar: we both need to add the icon, buttons both have imported aspects 
+2 things that are different: different hover implementation, our color variation is on the button and theirs is a seperate button
+
+Code snippet you plan on using: disable snippet 
+Return css
+:host([disabled]) {
+        filter: grayscale(80%);
+        pointer-events: none;
+      }
+Static get properties ()
+disabled: { type: Boolean, reflect: true },
+constructor() {
+this.disabled = false;
+
+09/29/21 
+Team Meeting
+The four of met together as a team yesterday evening to work on the button project.
+We were able to come up with an updated version of the button.
