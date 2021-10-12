@@ -45,6 +45,11 @@ Began to coordinate out of class schedules to meet
  
  (both groups worked off of on computer from each group) --> there were issues pushing work onto github so our group found other ways to collaborate;
 
+
+Sunday 10/3 Group Meeting: Justin and Delaney
+- NPM account creation
+- Storybook code
+- updated package.json file
  
        
         
